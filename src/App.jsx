@@ -8,7 +8,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [filter, setFilter] = useState('all');
 
-  // Load tasks from localStorage on app start
+  
   useEffect(() => {
     const saved = localStorage.getItem('tasks');
     if (saved) {
@@ -16,12 +16,12 @@ function App() {
     }
   }, []);
 
-  // Save tasks to localStorage every time they change
+  
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
 
-  // Add new task with title, description, and dueDate
+  
   function addTask(title, description, dueDate) {
     const newTask = {
       id: uuid(),
@@ -33,13 +33,13 @@ function App() {
     setTasks([newTask, ...tasks]);
   }
 
-  // Delete a task by ID
+  
   function deleteTask(id) {
     const updatedTasks = tasks.filter(task => task.id !== id);
     setTasks(updatedTasks);
   }
 
-  // Toggle completion status
+  
   function toggleComplete(id) {
     const updatedTasks = tasks.map(task => {
       if (task.id === id) {

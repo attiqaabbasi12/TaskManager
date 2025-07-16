@@ -2,16 +2,16 @@ import TaskItem from './TaskItem';
 import { AnimatePresence } from 'framer-motion';
 
 function TaskList({ tasks, filter, deleteTask, toggleComplete }) {
-  let visibleTasks = tasks.slice(); // copy tasks
+  let visibleTasks = tasks.slice(); 
 
-  // Sort tasks by due date
+  
   visibleTasks.sort((a, b) => {
     if (!a.dueDate) return 1;
     if (!b.dueDate) return -1;
     return new Date(a.dueDate) - new Date(b.dueDate);
   });
 
-  // Filter after sorting
+  
   if (filter === 'completed') {
     visibleTasks = visibleTasks.filter(task => task.completed);
   } else if (filter === 'pending') {

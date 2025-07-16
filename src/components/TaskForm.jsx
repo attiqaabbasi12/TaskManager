@@ -23,7 +23,7 @@ function TaskForm({ addTask }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4 bg-gray-800 p-4 rounded-lg">
+    <form onSubmit={handleSubmit} className="mb-4 bg-gray-800 p-4 rounded-lg text-center">
       <input
         type="text"
         value={title}

@@ -49,7 +49,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white p-4">
-      <h1 className="text-3xl text-center font-bold mb-6">My Task Manager</h1>
+      <h1 className="text-3xl text-center font-bold mb-6">Task Manager App</h1>
 
       <TaskForm addTask={addTask} />
       <TaskFilter filter={filter} setFilter={setFilter} />
